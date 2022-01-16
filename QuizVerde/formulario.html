@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>Quiz Verde - Sobre</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+    <div class="overlay" style="background-image:url('images/florestabackprincipal.jpg');">
+        <div class="wrapper row0">
+            <div id="topbar" class="hoc clear">
+                <p class="fl_right nospace"><a class="btn" href="quiz.html">JOGAR AGORA!</a></p>
+            </div>
+        </div>
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="fl_left">
+                    <h1><a href="index.html">Quiz Verde</a></h1>
+                </div>
+                <nav id="mainav" class="fl_right">
+
+                    <ul class="clear">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="formulario.html">Formulario</a></li>
+                        <li><a href="criadores.html">Membros</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="wrapper row3">
+            <main class="hoc container clear">
+                <div class="content">
+                    <div id="comments">
+                        <h2>Write A Comment</h2>
+                        <form action="index.html" method="post" id="formQV">
+                            <div class="one_third first">
+                                <label for="name">Name <span>*</span></label>
+                                <input type="text" name="name" id="name" value="" size="22" required>
+                            </div>
+                            <div class="one_third">
+                                <label for="email">Mail <span>*</span></label>
+                                <input type="email" name="email" id="email" value="" size="22" required>
+                            </div>
+                            <div class="block clear">
+                                <label for="comment">Your Comment</label>
+                                <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" name="submit" value="Submit Form">
+                                &nbsp;
+                                <input type="reset" name="reset" value="Reset Form">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </main>
+        </div>
+
+        <div class="wrapper row5">
+            <div id="copyright" class="hoc clear">
+
+                <p class="fl_left">Copyright &copy; 2022 - IPMAIA - Grupo 02</p>
+                <p class="fl_right">Trabalho realizado por: <a target="_blank" title="trabalhorealizado"><br>Jorge
+                        Aguiar <br>
+                        Pedro Pereira <br> Nuno Barreto</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+<style>
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 999;
+    }
+  </style>
+  
+</html>
