@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<quizverde>
+    <curi>
+        <id>1</id>
+        <curiosidades>Sabiam que a floresta Taiga é a maior floresta do mundo?</curiosidades>
+    </curi>
+    <curi>
+        <id>2</id>
+        <curiosidades>Sabiam que a Amazonia fica na América do Sul?</curiosidades>
+    </curi>
+    <curi>
+        <id>3</id>
+        <curiosidades>Sabiam que 10.4M de hectares são abatidos anualmente?</curiosidades>
+    </curi>
+</quizverde>

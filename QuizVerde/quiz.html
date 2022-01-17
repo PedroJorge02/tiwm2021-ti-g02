@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <title>Quiz Verde - Sobre</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="layout/styles/quiz.css" rel="stylesheet" type="text/css" media="all">
+  <script defer src="layout/scripts/quizscript.js"></script>
+</head>
+
+<body id="top">
+  <div class="overlay" style="background-image:url('images/florestabackprincipal.jpg');">
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left">
+          <h1><a href="index.html">Quiz Verde</a></h1>
+        </div>
+        <nav id="mainav" class="fl_right">
+
+          <ul class="clear">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="criadores.html">Membros</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+      <main class="hoc container clear">
+        <div class="quizverde">
+            <div class="container1">
+                <div id="question-container1" class="hide">
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="btn1-grid">
+                      <button class="btt">Answer 1</button>
+                      <button class="btt">Answer 2</button>
+                      <button class="btt">Answer 3</button>
+                      <button class="btt">Answer 4</button>
+                    </div>
+                    <p id="score"></p>
+                </div>
+                  <div class="controls">
+                    <button id="start-btn" class="start-btn btt">Start</button>
+                    <button id="next-btn" class="next-btn btt hide">Next</button>
+                  </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+      </main>
+
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+
+        <p class="fl_left">Copyright &copy; 2022 - IPMAIA - Grupo 02</p>
+        <p class="fl_right">Trabalho realizado por: <a target="_blank" title="trabalhorealizado"><br>Jorge Aguiar <br>
+            Pedro Pereira <br> Nuno Barreto</a></p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End Bottom Background Image Wrapper -->
+
+  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+</body>
+
+<style>
+  .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 999;
+  }
+</style>
+
+</html>

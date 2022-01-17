@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <title>Quiz Verde - Sobre</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+  <div class="overlay" style="background-image:url('images/florestabackprincipal.jpg');">
+    <div class="wrapper row0">
+      <div id="topbar" class="hoc clear">
+        <p class="fl_right nospace"><a class="btn" href="quiz.html">JOGAR AGORA!</a></p>
+      </div>
+    </div>
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left">
+          <h1><a href="index.html">Quiz Verde</a></h1>
+        </div>
+        <nav id="mainav" class="fl_right">
+
+          <ul class="clear">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="criadores.html">Membros</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper row3">
+      <main class="hoc container clear">
+        <!-- main body -->
+
+        <div class="content">
+          <h1>O Quiz Verde</h1>
+          <img class="imgr borderedbox inspace-5" src="images/ipmaia.png" alt="">
+          <p>Quiz Verde é um jogo de perguntas sobre florestas, desenvolvido no ambito da disciplina Tecnologias de
+            Internet, pelos alunos Jorge, Pedro e Nuno.</p>
+          <p>Com este jogo temos como objetivo ensinar coisas sobre as florestas que as pessoas podem nao saber de uma
+            forma mais atrativa.</p>
+          <img class="imgl borderedbox inspace-5" src="images/florestaback.jpg" alt="">
+          <p>Este jogo consiste em responder as perguntas simplesmente com o objetivo de aprender, sem qualquer pressão de falhar ou de ganhar.</p>
+          <p>As perguntas são sobra factos e curiosidades sobre florestas, aposto que vão descobrir algo que ainda nao sabem</p>
+          </div>
+        <div id="tabela"></div>
+        <div class="clear"></div>
+      </main>
+    </div>
+
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+
+        <p class="fl_left">Copyright &copy; 2022 - IPMAIA - Grupo 02</p>
+        <p class="fl_right">Trabalho realizado por: <a target="_blank" title="trabalhorealizado"><br>Jorge Aguiar <br>
+            Pedro Pereira <br> Nuno Barreto</a></p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End Bottom Background Image Wrapper -->
+
+  <script>
+    var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+
+function reportStatus() {
+    if (oXHR.readyState == 4)
+        import_xml_table(this.responseXML);
+}
+
+oXHR.onreadystatechange = reportStatus;
+oXHR.open("GET", "quizverde.xml", true);
+oXHR.send();
+
+function import_xml_table(xml) {
+
+    var tabeladiv = document.getElementById('tabela');
+    var curicuri = xml.getElementsByTagName('curi');
+
+    var tabelacuri = document.createElement('table');
+
+    var curiheader = document.createElement('tr');
+    var coluna2 = document.createElement('th');
+
+    coluna2.innerHTML = "Curiosidades";
+
+    curiheader.appendChild(coluna2);
+
+    tabeladiv.appendChild(tabelacuri);
+    tabelacuri.appendChild(curiheader);
+
+    for (var i = 0; i < curicuri.length; i++) {
+        var TR = document.createElement('tr');
+
+        var colunaTD2 = document.createElement('td');
+
+        colunaTD2.innerHTML = curicuri[i].getElementsByTagName("curiosidades")[0].childNodes[0].nodeValue;
+
+        TR.appendChild(colunaTD2);
+
+        tabelacuri.appendChild(TR);
+    }
+};
+  </script>
+  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
